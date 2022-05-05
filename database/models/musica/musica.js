@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const { Schema } = require('../../mongoose');
 const musicaSchema = new mongoose.Schema({
     numero: { type: String },
     nombre: { type: String },
