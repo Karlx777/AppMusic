@@ -198,15 +198,17 @@ app.get('/artistaAlbum/:id', (req, res) => {
         .then((list) => {res.send(list); console.log(list)})
         .catch( (error) => {console.log(error)});
 })
-
+//consulta 5
+app.get('/topcinco', (req, res) => {
+    
+    Musica.find({favorito: true},{nombre:1, favorito:1}).populate("albumID").limit(5)
+        .then((list) => {res.send(list); console.log(list)})
+        .catch( (error) => {console.log(error)});
+})
 //consulta 6
 app.get('/albums2022', (req, res) => {
     
-    Album.find().where(
-        {
-            anio : "2022"   
-        }
-    )
+    Album.find({anio:"2022"})    
         .then((list) => {res.send(list); console.log(list)})
         .catch( (error) => {console.log(error)});
 })
