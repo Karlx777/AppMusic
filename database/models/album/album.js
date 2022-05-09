@@ -1,4 +1,6 @@
 const mongoose = require('mongoose');
+const { Schema } = require('../../mongoose');
+
 const albumSchema = new mongoose.Schema({
     titulo: { type: String },
     descripcion: { type: String },
