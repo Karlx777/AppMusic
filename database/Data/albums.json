@@ -1,0 +1,82 @@
+[
+    {
+        "titulo": "Barbabas",
+        "descripcion": "Project Manager",
+        "anio": "2008",
+        "imagen": "http://dummyimage.com/117x100.png/dddddd/000000",
+        "artistaID": "627917cef1fd5b30106c1af7"
+        
+    },
+    {
+        "titulo": "Consuela",
+        "descripcion": "Supervisor",
+        "anio": "2022",
+        "imagen": "http://dummyimage.com/120x100.png/cc0000/ffffff",
+        "artistaID": "627917cef1fd5b30106c1af7"
+        
+    },
+    {
+        "titulo": "Franklyn",
+        "descripcion": "Construction Manager",
+        "anio": "2003",
+        "imagen": "http://dummyimage.com/201x100.png/dddddd/000000",
+        "artistaID": "627917cef1fd5b30106c1af9"
+        
+    },
+    {
+        "titulo": "Lynnea",
+        "descripcion": "Project Manager",
+        "anio": "1984",
+        "imagen": "http://dummyimage.com/244x100.png/ff4444/ffffff",
+        "artistaID": "627917cef1fd5b30106c1af9"
+        
+    },
+    {
+        "titulo": "Elsey",
+        "descripcion": "Engineer",
+        "anio": "2008",
+        "imagen": "http://dummyimage.com/197x100.png/cc0000/ffffff",
+        "artistaID": "627917cef1fd5b30106c1af8"
+        
+    },
+    {
+        "titulo": "Hewe",
+        "descripcion": "Subcontractor",
+        "anio": "2022",
+        "imagen": "http://dummyimage.com/165x100.png/cc0000/ffffff",
+        "artistaID": "627917cef1fd5b30106c1af8"
+        
+    },
+    {
+        "titulo": "Perry",
+        "descripcion": "Supervisor",
+        "anio": "2004",
+        "imagen": "http://dummyimage.com/189x100.png/dddddd/000000",
+        "artistaID": "627917cef1fd5b30106c1af6"
+        
+    },
+    {
+        "titulo": "Bernete",
+        "descripcion": "Engineer",
+        "anio": "2022",
+        "imagen": "http://dummyimage.com/217x100.png/dddddd/000000",
+        "artistaID": "627917cef1fd5b30106c1af6"
+        
+    },
+    {
+        "titulo": "Enos",
+        "descripcion": "Project Manager",
+        "anio": "2010",
+        "imagen": "http://dummyimage.com/235x100.png/cc0000/ffffff",
+        "artistaID": "627917cef1fd5b30106c1af5"
+        
+    },
+    {
+        "titulo": "Aggy",
+        "descripcion": "Construction Manager",
+        "anio": "1994",
+        "imagen": "http://dummyimage.com/217x100.png/cc0000/ffffff",
+        "artistaID": "627917cef1fd5b30106c1af5"
+        
+    }
+]

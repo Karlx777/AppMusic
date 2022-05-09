@@ -1,0 +1,28 @@
+[
+    {
+        "nombre": "Griffith",
+        "descripcion": "Surveyor",
+        "imagen": "http://dummyimage.com/230x100.png/cc0000/ffffff"
+    },
+    {
+        "nombre": "Fernando",
+        "descripcion": "Surveyor",
+        "imagen": "http://dummyimage.com/213x100.png/dddddd/000000"
+    },
+    {
+        "nombre": "Thomasine",
+        "descripcion": "Supervisor",
+        "imagen": "http://dummyimage.com/104x100.png/ff4444/ffffff"
+    },
+    {
+        "nombre": "Saxon",
+        "descripcion": "Architect",
+        "imagen": "http://dummyimage.com/175x100.png/5fa2dd/ffffff"
+    },
+    {
+        "nombre": "Cherida",
+        "descripcion": "Construction Manager",
+        "imagen": "http://dummyimage.com/131x100.png/ff4444/ffffff"
+        
+    }
+]
