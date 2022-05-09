@@ -140,7 +140,7 @@ app.put('/putAlbums/:id', (req, res) => {
 
 app.delete('/albums/:id', (req, res) => {
     Album.deleteOne(
-        { titulo: req.params.id }
+        { _id: req.params.id }
     )
         .then((result) => {
             res.json('Deleted')
@@ -177,7 +177,7 @@ app.put('/putMusica/:id', (req, res) => {
             upsert: true
         }
     ).then((result) => {res.json('Updated') })
-        .catch(error => console.error(error))
+    .catch(error => console.error(error))
 
 })
 
@@ -199,6 +199,29 @@ app.get('/artistaAlbum/:id', (req, res) => {
         .catch( (error) => {console.log(error)});
 })
 
+//consulta 6
+app.get('/albums2022', (req, res) => {
+    
+    Album.find().where(
+        {
+            anio : "2022"   
+        }
+    )
+        .then((list) => {res.send(list); console.log(list)})
+        .catch( (error) => {console.log(error)});
+})
+//consulta 7
+
+app.get('/buscarMusica', (req, res) => {
+    
+    Musica.find().where(
+        {
+           nombre : /.*tamp.*/i   
+        }
+    )
+        .then((list) => {res.send(list); console.log(list)})
+        .catch( (error) => {console.log(error)});
+})
 
 app.listen( 3000, () => {
     console.log('iniciando server en puerto 3000');
