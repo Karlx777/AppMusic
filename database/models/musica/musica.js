@@ -5,6 +5,7 @@ const musicaSchema = new mongoose.Schema({
     nombre: { type: String },
     duracion: { type: String},
     archivo: { type: String},
+    favorito: {type: Boolean},
     albumID: { type: Schema.ObjectId, ref: "album" }
 })
 const Musica = mongoose.model('musica', musicaSchema);

@@ -102,7 +102,7 @@ app.put('/putMusica/:id', (req, res) => {
 })
 
 app.delete('/deletMusica/:id', (req, res) => {
-    Musica.deleteOne(
+    Mus.deleteOne(
         { nombre: req.params.id }
     )
         .then((result) => {
