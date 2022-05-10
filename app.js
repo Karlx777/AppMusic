@@ -7,6 +7,8 @@ const Artista = require("./database/models/artista/artista");
 const Album = require("./database/models/album/album");
 const Musica = require('./database/models/musica/musica');
 const { Schema } = require('./database/mongoose');
+const { path } = require('express/lib/application');
+const { populate } = require('./database/models/usuario/usuario');
 
 // configuracion cabeceras http
 app.use((req, res, next) => {
@@ -199,6 +201,23 @@ app.get('/artistaAlbum/:id', (req, res) => {
         .catch( (error) => {console.log(error)});
 })
 
+// 2. Escriba una consulta que muestre Todos los ALBUMS de cualquier artista
+app.get('/todosLosAlbunes', (req, res) => {
+    Album.find()
+        .select('titulo')    
+        .then((list) => {res.send(list); console.log(list)})
+        .catch( (error) => {console.log(error)});
+})
+
+// 3. Escriba una consulta que liste las canciones de cualquier ALBUM y su ARTISTA
+// Ejemplo:
+app.get('/listaDeCanciones/:id/', (req, res) => {
+    Musica.find({albumID: req.params.id})
+        .populate('albumID', 'artistaID')  
+        .then((list) => {res.send(list); console.log(list)})
+        .catch( (error) => {console.log(error)});
+})
+// 
 
 app.listen( 3000, () => {
     console.log('iniciando server en puerto 3000');
