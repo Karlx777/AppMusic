@@ -142,7 +142,7 @@ app.put('/putAlbums/:id', (req, res) => {
 
 app.delete('/albums/:id', (req, res) => {
     Album.deleteOne(
-        { titulo: req.params.id }
+        { _id: req.params.id }
     )
         .then((result) => {
             res.json('Deleted')
@@ -179,12 +179,12 @@ app.put('/putMusica/:id', (req, res) => {
             upsert: true
         }
     ).then((result) => {res.json('Updated') })
-        .catch(error => console.error(error))
+    .catch(error => console.error(error))
 
 })
 
 app.delete('/deletMusica/:id', (req, res) => {
-    Musica.deleteOne(
+    Mus.deleteOne(
         { nombre: req.params.id }
     )
         .then((result) => {
@@ -194,9 +194,15 @@ app.delete('/deletMusica/:id', (req, res) => {
 })
 // consultas
 
+// app.get('/artistaAlbum/:id', (req, res) => {
+//     Musica.find({artistaID: req.params.id})
+//         .populate('albumID')        
+//         .then((list) => {res.send(list); console.log(list)})
+//         .catch( (error) => {console.log(error)});
+// })
 app.get('/artistaAlbum/:id', (req, res) => {
-    Musica.find({artistaID: req.params.id})
-        .populate('albumID')        
+    Musica.findOne()
+        .populate('albumID').find({artistaID: req.params.id})
         .then((list) => {res.send(list); console.log(list)})
         .catch( (error) => {console.log(error)});
 })
@@ -217,7 +223,32 @@ app.get('/listaDeCanciones/:id/', (req, res) => {
         .then((list) => {res.send(list); console.log(list)})
         .catch( (error) => {console.log(error)});
 })
-// 
+//
+//consulta 5
+app.get('/topcinco', (req, res) => {
+    
+    Musica.find({favorito: true},{nombre:1, favorito:1}).populate("albumID").limit(5)
+        .then((list) => {res.send(list); console.log(list)})
+        .catch( (error) => {console.log(error)});
+})
+//consulta 6
+app.get('/albums2022', (req, res) => {
+    
+    Album.find({anio:"2022"})    
+        .then((list) => {res.send(list); console.log(list)})
+        .catch( (error) => {console.log(error)});
+})
+//consulta 7 
+app.get('/buscarMusica', (req, res) => {
+    
+    Musica.find().where(
+        {
+           nombre : /.*tamp.*/i   
+        }
+    )
+        .then((list) => {res.send(list); console.log(list)})
+        .catch( (error) => {console.log(error)});
+})
 
 app.listen( 3000, () => {
     console.log('iniciando server en puerto 3000');

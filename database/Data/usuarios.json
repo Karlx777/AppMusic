@@ -1,0 +1,42 @@
+[
+    {
+        "nombre": "Everito",
+        "correo": "everito@gmail.com",
+        "contrasena": "123456789",
+        "rol": "Administrador",
+        "imagen": "img.jpg"
+        
+    },
+    {
+        "nombre": "Agnes",
+        "correo": "alaneham0@furl.net",
+        "contrasena": "PAZ8nvSZWw2I",
+        "rol": "Supervisor",
+        "imagen": "http://dummyimage.com/191x100.png/ff4444/ffffff"
+        
+    },
+    {
+        "nombre": "Peta",
+        "correo": "phatherleigh1@weather.com",
+        "contrasena": "ErbwSy8j",
+        "rol": "Construction Manager",
+        "imagen": "http://dummyimage.com/143x100.png/dddddd/000000"
+        
+    },
+    {
+        "nombre": "Anthiathia",
+        "correo": "asponer2@qq.com",
+        "contrasena": "u38RWbOg08g",
+        "rol": "Electrician",
+        "imagen": "http://dummyimage.com/188x100.png/dddddd/000000"
+        
+    },
+    {
+        "nombre": "Adda",
+        "correo": "agye3@msu.edu",
+        "contrasena": "3QatNfOqWuV",
+        "rol": "Estimator",
+        "imagen": "http://dummyimage.com/231x100.png/5fa2dd/ffffff"
+        
+    }
+]
